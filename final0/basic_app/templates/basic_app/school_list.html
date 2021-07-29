@@ -1,0 +1,18 @@
+
+
+{% extends 'basic_app/basic_app_base.html' %}
+{% block body_block %}
+
+<h1>welcome to a list of all the schools!</h1>
+
+  {% if Schools %}
+<ol>
+  {% for school in Schools %}
+    <h2><li><a href="{% url 'basic_app:detail' school.id %}">{{school.name}}</a></li></h2>
+  {% endfor %}
+</ol>
+{% else %}
+    <p>There are no Schools in the library.</p>
+{% endif %}
+<a class="btn btn-primary" href="{% url 'basic_app:create' %}">Create New School</a>
+{% endblock %}

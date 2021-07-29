@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Base</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="{% url 'basic_app:list' %}">School</a>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'admin:index' %}">Admin</a>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+  {% block body_block %}
+  {% endblock %}
+</div>
+
+
+
+</body>
+</html>
